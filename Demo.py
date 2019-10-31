@@ -1,27 +1,41 @@
-namn = "Stefan "
-namn2 = "Holmberg" 
-fullName = namn + namn2
-print(fullName)
-
-
-for filnamn in listOfAllFiles:
-    if filnamn.find(".log") != -1:
-        print(filnamn)
-
-
-
-
-res = namn.find(".log")
-print(res)
-
-
 import os
+import datetime
+
+datum = datetime.datetime.now()
+if(datum.month == 10):
+    print("Åhh fyy oktober");
+if(datum.day == 1):
+    print("jsdfiljasf");
+if(datum.hour > 9):    
+    print("jsdfiljasf");
+
+
+ago = datum - datetime.timedelta(days=52)
+
+
+datum1 = datetime.datetime.now()
+datum2 = datetime.datetime(2019,12,24,15,0,0)
+d = datum2 - datum1
+print(d)
+
+
+
+filAtLoggaStatusI = "c:\\kurser\\status.txt"
+
+
 listOfAllFiles = os.listdir("c:\\kurser")
+
+with open(filAtLoggaStatusI, "a") as myfile:
+    myfile.write(f"{datetime.datetime.now()} Nu startar Claes-scriptet\n")
 
 listOfLogFiles = []
 for filnamn in listOfAllFiles:
     if filnamn.find(".log") != -1:
         listOfLogFiles.append(filnamn)
+
+with open(filAtLoggaStatusI, "a") as myfile:
+    myfile.write(f"{datetime.datetime.now()} Hittade {len(listOfLogFiles)} loggfiler\n")
+
 
 
 if not os.path.exists("c:\\kurser\\claes"):
@@ -32,6 +46,11 @@ for filnamn in listOfLogFiles:
     with open("c:\\kurser\\" + filnamn) as myfile:
         if "Claes" in myfile.read():
             filesWithClaesIn.append(filnamn)
+
+
+with open(filAtLoggaStatusI, "a") as myfile:
+    myfile.write(f"{datetime.datetime.now()} Hittade {len(filesWithClaesIn)} Claes filer\n")
+
 
 for filnamn in filesWithClaesIn:
     os.rename("c:\\kurser\\" + filnamn, "c:\\kurser\\claes\\" + filnamn)            
@@ -198,3 +217,18 @@ print("12*10")
 print("Hejsan ITS!")
 print(12.231312231)
 print(True)
+namn = "Stefan "
+namn2 = "Holmberg" 
+fullName = namn + namn2
+print(fullName)
+
+
+for filnamn in listOfAllFiles:
+    if filnamn.find(".log") != -1:
+        print(filnamn)
+
+
+
+
+res = namn.find(".log")
+print(res)
