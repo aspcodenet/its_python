@@ -1,3 +1,70 @@
+
+# filnamn = "c:\\hej\\hopp\\hej.log"
+# pos =  filnamn.find(".log")
+# if pos == -1:
+#     print("Hittade inte .log i filnamn")
+# else:
+#     print(f"Hittade på position {pos}")
+
+#  filnamn = "c:\\hej\\hopp\\hej.log"
+#  pos123 =  filnamn.rfind("\\")
+#  if pos123 == -1:
+#      print("Hittade inte h i filnamn")
+#  else:
+#      print(f"Hittade på position {pos123}")
+
+
+
+
+# inmatning = input("Vill du fortsätta J/N?")
+# inmatning = inmatning.lower()
+# if inmatning == "n":
+#     print("Hej då")
+
+namn = "Stefan"
+
+delAvNamn = namn[1:3]
+print(delAvNamn)
+
+namn2 = "Holmberg" 
+
+fullName = namn + " " + namn2
+antaltecken = len(fullName)
+print(fullName)
+
+
+listaMedTal = []
+listaMedTal = [22,33]
+listaMedNamn = ["Stefan","Josefine"]
+
+listaMedNamn.append("Oliver")
+antal = len(listaMedNamn)
+
+for namn in listaMedNamn:
+    print(namn)
+
+
+listaMedStorlekar = []
+for i in range(39,53):
+    if i == 39 or i == 40 or i == 41:
+        listaMedStorlekar.append(i)
+    if i == 42 or i == 44 or i == 45:
+        listaMedStorlekar.append(i)
+    if i == 47 or i == 48 or i == 49:
+        listaMedStorlekar.append(i)
+    if i == 50 or i == 51 or i == 52:
+        listaMedStorlekar.append(i)
+
+print("Vuxenstorlekar skor")
+for i in listaMedStorlekar:
+    print("Vi har storlek {i} i lager")
+
+
+n = int(input("Ange tal nummer {i}:"))
+listaMedTal.append(n)
+
+
+
 import os
 import datetime
 
@@ -16,7 +83,7 @@ ago = datum - datetime.timedelta(days=52)
 datum1 = datetime.datetime.now()
 datum2 = datetime.datetime(2019,12,24,15,0,0)
 d = datum2 - datum1
-print(d)
+print(d.days)
 
 
 
@@ -93,10 +160,10 @@ a = os.listdir("c:\\kurser")
 
 
 listaMedTal = []
+
 for i in range(0,4):
     n = int(input("Ange ett tal"))
     listaMedTal.append(n)
-
 greatestSoFar = 0
 for i in listaMedTal:
     if i > greatestSoFar:
@@ -217,10 +284,7 @@ print("12*10")
 print("Hejsan ITS!")
 print(12.231312231)
 print(True)
-namn = "Stefan "
-namn2 = "Holmberg" 
-fullName = namn + namn2
-print(fullName)
+
 
 
 for filnamn in listOfAllFiles:
