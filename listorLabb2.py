@@ -19,3 +19,5 @@ for temp in listaMedTal:
     antal = antal + 1
 
 print(f"Max:{maxTal}  Medel:{summa/antal}")
+
+print(f"Max:{max(listaMedTal)}  Medel:{sum(listaMedTal)/len(listaMedTal)}")

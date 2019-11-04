@@ -13,3 +13,24 @@ for filename in os.listdir(args.d):
             continue
     s = os.path.getsize(args.d + "\\" + filename)
     print(f"{filename} {s} bytes")
+
+
+
+
+
+
+
+
+
+for filename in os.listdir(args.d):
+    if filename.find(args.f) >= 0:
+        print(filename)
+
+
+
+
+
+
+
+
+
