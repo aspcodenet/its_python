@@ -16,6 +16,7 @@ if not os.path.exists(args.d):
 newName = args.d + "\\" + args.f
 if os.path.exists(newName):
     datum = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
-    filename, file_extension = os.path.splitext(newName)
+    file_extension = os.path.splitext(newname)[1]
+    filename = os.path.splitext(newname)[0]          
     newName = filename + datum + file_extension
 shutil.copyfile(args.f,newName)
